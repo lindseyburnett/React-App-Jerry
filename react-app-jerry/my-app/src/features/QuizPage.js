@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 
 export function QuizLayout(){
 
@@ -18,10 +20,10 @@ export function QuizLayout(){
     ]}
 
     function answerCheck (isCorrect) {
-    if (isCorrect = true) { 
-            console.log('correct'); 
-        }
-            console.log('incorrect')
+    if (isCorrect === true) { 
+        alert('correct'); 
+        } else if (isCorrect === false)
+        alert('incorrect')
         }
     
     
@@ -30,12 +32,18 @@ export function QuizLayout(){
         <div>
             <span>Correct Answers = </span>
 
-
+            
 
             <Grid container spacing={2}>
                 <Grid item xs={12}>
+                    <ImageList sx={{ width: 500, height: 450 }}>
+                        <ImageListItem>
+                            <img
+                            src={'img/pic.PNG'}
+                            />
+                         </ImageListItem>
 
-                    <Image></Image>
+                    </ImageList>
 
                 </Grid>
 
@@ -43,16 +51,16 @@ export function QuizLayout(){
 
                     <Button
                         variant="contained"
-                        OnClick={(answerCheck) => this.state.isCorrect = false}>Lavendar</Button>
+                        onClick={() => answerCheck(false)}>Lavendar</Button>
                     <Button
                         variant="contained"
-                        OnClick={(answerCheck) => this.state.isCorrect = true}>Lawyer</Button>
+                        onClick={() => answerCheck(true)}>Lawyer</Button>
                     <Button
                         variant="contained"
-                        OnClick={(answerCheck) => this.state.isCorrect = false}>Listen</Button>
+                        onClick={() => answerCheck(false)}>Listen</Button>
                     <Button
                         variant="contained"
-                        OnClick={(answerCheck) => this.state.isCorrect = false}>Laptop</Button>
+                        onClick={() => answerCheck(false)}>Laptop</Button>
 
 
                 </Grid>
