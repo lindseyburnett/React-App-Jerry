@@ -7,24 +7,10 @@ import ImageListItem from "@mui/material/ImageListItem";
 export function QuizLayout(){
 
 
-    const answers = {    questions: [
-        {
-            options: [
-                { answer: 'Lavender', isCorrect: false },
-                { answer: 'Lawyer', isCorrect: true },
-                { answer: 'Listen', isCorrect: false },
-                { answer: 'Laptop', isCorrect: false },
-
-            ]
-        }
-    ]}
 
     function answerCheck (isCorrect) {
-    if (isCorrect === true) { 
-        alert('correct'); 
-        } else if (isCorrect === false)
-        alert('incorrect')
-        }
+        alert(isCorrect ? 'correct' : 'incorrect')
+    }
     
     
 
@@ -36,10 +22,10 @@ export function QuizLayout(){
 
             <Grid container spacing={2}>
                 <Grid item xs={12}>
-                    <ImageList sx={{ width: 500, height: 450 }}>
+                    <ImageList sx={{ width: 500, height: 500 }}>
                         <ImageListItem>
                             <img
-                            src={'img/pic.PNG'}
+                            src={'../img/pic.jpg'}
                             />
                          </ImageListItem>
 
