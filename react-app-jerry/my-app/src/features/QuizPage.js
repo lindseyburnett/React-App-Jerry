@@ -7,7 +7,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 export function QuizLayout(){
 
 
-    const Answers = {    questions: [
+    const answers = {    questions: [
         {
             options: [
                 { answer: 'Lavender', isCorrect: false },
